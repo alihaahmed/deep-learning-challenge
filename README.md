@@ -29,7 +29,6 @@ All necessary dependencies were first imported (train_test_split from sklearn.mo
 * INCOME_AMT
 * SPECIAL_CONSIDERATIONS
 * ASK_AMT
-* IS_SUCCESSFUL
 
 The number of unique values in each column were determined using .nunique(). Two categorical features, 'APPLICATION_TYPE' and 'CLASSIFICATION', were found to have more than 10 unique values with 17 and 71 unique values, respectively. A cutoff value was chosen for each variable for binning purposes using .value_counts(), with all rare values below the cutoff threshold bucketed into an "Other" category. All categorical data was then numerically encoded using pd.get_dummies within the DataFrame. The preprocessed data was split into feature and target arrays and subsequently split into a training and testing dataset. A StandardScaler instance was initiated, only the training feature data was fitted to prevent leakage in the workflow, and both training and test feature data were scaled and transformed.
 
